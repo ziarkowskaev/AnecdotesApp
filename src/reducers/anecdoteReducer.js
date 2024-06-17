@@ -37,7 +37,7 @@ export const voteForA = (id) => {
   };
 };
 
-const reducer = (state = initialState, action) => {
+const anecdoteReducer = (state = initialState, action) => {
   console.log(action);
   switch (action.type) {
     case "NEW_ANECDOTE":
@@ -56,4 +56,4 @@ const reducer = (state = initialState, action) => {
       return state.sort((a, b) => b.votes - a.votes);
   }
 };
-export default reducer;
+export default anecdoteReducer;
