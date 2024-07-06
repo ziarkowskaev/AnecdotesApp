@@ -3,7 +3,7 @@
     {
       "content": "If it hurts, do it more often",
       "id": "47145",
-      "votes": 0
+      "votes": 6
     },
     {
       "content": "Some fun anecdote for testing",
@@ -23,7 +23,7 @@
     {
       "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
       "id": "36975",
-      "votes": 0
+      "votes": 1
     },
     {
       "content": "Premature optimization is the root of all evil.",
@@ -36,8 +36,27 @@
       "votes": 0
     },
     {
-      "id": "c677",
-      "content": "Another anecdote for tests",
+      "name": "Add your name in the body",
+      "id": "c677"
+    },
+    {
+      "id": "5898",
+      "content": "some anecdote",
+      "votes": 1
+    },
+    {
+      "id": "3edd",
+      "content": "some anecdote",
+      "votes": 0
+    },
+    {
+      "id": "0e50",
+      "content": "add",
+      "votes": 0
+    },
+    {
+      "id": "4546",
+      "content": "test",
       "votes": 0
     }
   ]
