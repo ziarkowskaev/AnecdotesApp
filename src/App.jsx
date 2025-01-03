@@ -41,25 +41,24 @@ const App = () => {
   const anecdotes = result.data
 
   return (
-    <div>
-      <h3>Anecdote app</h3>
-    
+    <div className="main">
+      <h3>Anecdote App</h3>
+      
       <Notification />
       <AnecdoteForm />
-    
-      {anecdotes.map(anecdote =>
-        <div key={anecdote.id}>
+      
+      {anecdotes.map(anecdote => (
+        <div key={anecdote.id} className="anecdote">
+          <div style={{fontWeight:"bold"}}>{anecdote.content}</div>
           <div>
-            {anecdote.content}
-          </div>
-          <div>
-            has {anecdote.votes}
-            <button onClick={() => handleVote(anecdote)}>vote</button>
+            Has {anecdote.votes} votes
+            <button onClick={() => handleVote(anecdote)}>Vote</button>
           </div>
         </div>
-      )}
+      ))}
     </div>
-  )
+  );
+  
 }
 
 export default App

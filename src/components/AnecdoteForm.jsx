@@ -14,7 +14,7 @@ const AnecdoteForm = () => {
         queryClient.setQueryData({ queryKey: ['anecdotes'] }, anecdotes.concat(newAnecdote))
         dispatchNotification({
           type: 'SET_NOTIFICATION',
-          payload: { message: `anecdote '${newAnecdote.content}' created`}
+          payload: { message: `An anecdote '${newAnecdote.content}' created`}
         });
       },
       onError: (error) => {
@@ -33,15 +33,16 @@ const AnecdoteForm = () => {
     newAnecdoteMutation.mutate({content, votes:0})
 }
 
-  return (
-    <div>
-      <h3>create new</h3>
-      <form onSubmit={onCreate}>
-        <input name='anecdote' />
-        <button type="submit">create</button>
-      </form>
-    </div>
-  )
+return (
+  <div className="AnecdoteForm">
+    <h3>Create New Anecdote</h3>
+    <form onSubmit={onCreate}>
+      <input name="anecdote" />
+      <button type="submit">Add Anecdote</button>
+    </form>
+  </div>
+);
+
 }
 
 export default AnecdoteForm

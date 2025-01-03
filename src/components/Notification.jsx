@@ -1,12 +1,18 @@
 import React, { useEffect } from 'react';
 import { useNotificationDispatch, useNotificationValue } from "../NotificationContex";
 const Notification = () => {
-  const style = {
-    border: 'solid',
-    padding: 10,
-    borderWidth: 1,
-    marginBottom: 5
-  }
+
+  const notificationStyle = {
+    padding: '10px 20px',
+    borderRadius: '5px',
+    marginBottom: '10px',
+    border: '1px solid',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white', 
+    backgroundColor: '#28a745',
+  };
   
   const notification = useNotificationValue();
   const dispatch = useNotificationDispatch();
@@ -19,14 +25,14 @@ const Notification = () => {
     }
   }, [notification, dispatch]);
 
-if(notification){
-  return (
-    <div style={notification}>
-      {notification.message}
-    </div>
-  )
+  if(notification && notification.message){
 
-}
+    return (
+      <div style={notificationStyle}>
+        {notification.message}
+      </div>
+    )
+  }
   
 }
 
